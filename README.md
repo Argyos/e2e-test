@@ -13,3 +13,6 @@ or
     bash install.sh
  
 to install chrome 
+
+## How to debug
+(cast): https://goo.gl/73XvAB 
