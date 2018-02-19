@@ -2,9 +2,9 @@ var assert = require('chai').assert
 
 describe(':: First test', function () {
        
-	it(':: Hello World', function(){
-		var aux = 'Hello World';
-		assert.equal(aux,'Hello World','Custom ERROR, need to be "Hello World"');
+	it(':: Google word', function(){
+		browser.url('https://google.com');
+		assert.include($('#_eEe').getText(),'Google','Custom ERROR, need to contain "Google" word');
 	})
 
 });

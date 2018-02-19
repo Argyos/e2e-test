@@ -1,4 +1,6 @@
 exports.config = {
+    debug: true,
+    execArgv: ["--inspect=127.0.0.1:5859"],
     
     //
     // ==================
@@ -50,7 +52,18 @@ exports.config = {
         // 5 instances get started at a time.
         maxInstances: 5,
         //
-        browserName: 'chrome'
+        browserName: 'chrome',
+        // INI: Disable Images
+        'chromeOptions': {
+            'prefs': {
+                'profile': {
+                    'default_content_setting_values': { 'images': 2 }
+                }
+            }
+        },
+        nativeEvents: true,
+        //singleWindow: true
+        // END: Disable Images
     }],
     //
     // ===================
@@ -136,7 +149,8 @@ exports.config = {
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
     mochaOpts: {
-        ui: 'bdd'
+        ui: 'bdd',
+        timeout: 9999999
     },
     //
     // =====
